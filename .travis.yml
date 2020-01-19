@@ -6,3 +6,13 @@ branches:
     - develop
 jdk:
   - oraclejdk11
+deploy:
+    provider: heroku
+    app: undefined-ms-register-develop
+    api_key: $HEROKU_TOKEN
+    skip_cleanup: true
+    on:
+        repo: https://github.com/undefined-tech/undefined-ms-register
+        branch: develop
+notifications:
+    email: false
