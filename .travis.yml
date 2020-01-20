@@ -12,7 +12,7 @@ deploy:
     api_key: $HEROKU_TOKEN
     skip_cleanup: true
     on:
-        repo: https://github.com/undefined-tech/undefined-ms-register
+        repo: undefined-tech/undefined-ms-register
         branch: develop
 notifications:
     email: false
