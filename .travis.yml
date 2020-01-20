@@ -1,11 +1,11 @@
 language: java
 script: mvn clean install
 branches:
-  only:
-    - realease
-    - develop
+    only:
+        - realease
+        - develop
 jdk:
-  - oraclejdk11
+    - oraclejdk11
 deploy:
     provider: heroku
     app: undefined-ms-register-develop
