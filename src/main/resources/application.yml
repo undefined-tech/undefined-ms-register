@@ -1,3 +1,10 @@
 spring:
+    profiles:
+        active: dev
+    application:
+        name: ms-register
+    jpa:
+        hibernate:
+            ddl-auto: none
     liquibase:
-        enabled: false
+        enabled: true
