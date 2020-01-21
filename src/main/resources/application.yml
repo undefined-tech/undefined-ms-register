@@ -1,10 +1,11 @@
 spring:
-    profiles:
-        active: dev
-    application:
-        name: ms-register
-    jpa:
-        hibernate:
-            ddl-auto: none
-    liquibase:
-        enabled: true
+  profiles:
+    active: dev
+  application:
+    name: ms-register
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: true
+    change-log: classpath:/liquibase/change_log_master.xml

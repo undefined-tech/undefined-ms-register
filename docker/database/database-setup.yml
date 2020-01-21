@@ -1,12 +1,12 @@
 version: '3.7'
 services:
-    postgres:
-        image: postgres
-        container_name: postgres
-        ports:
-          - 5432:5432
-        environment:
-            - POSTGRES_USER=${MS_REGISTER_DATABASE_USER}
-            - POSTGRES_PASSWORD=${MS_REGISTER_DATABASE_PASSWORD}
-            - POSTGRES_DB=${MS_REGISTER_DATABASE_NAME}
+  postgres:
+    image: postgres
+    container_name: postgres-undefined-tech
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${MS_REGISTER_DATABASE_USER}
+      - POSTGRES_PASSWORD=${MS_REGISTER_DATABASE_PASSWORD}
+      - POSTGRES_DB=${MS_REGISTER_DATABASE_NAME}
 

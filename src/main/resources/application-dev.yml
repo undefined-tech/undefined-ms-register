@@ -1,0 +1,20 @@
+logging:
+  level:
+    ROOT: info
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/${MS_REGISTER_DATABASE_NAME}
+    username: ${MS_REGISTER_DATABASE_USER}
+    password: ${MS_REGISTER_DATABASE_PASSWORD}
+  jpa:
+    database: postgresql
+    show-sql: false
+server:
+  port: 8080
+  protocol: http
