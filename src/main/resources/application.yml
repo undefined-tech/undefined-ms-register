@@ -3,6 +3,11 @@ spring:
     active: dev
   application:
     name: ms-register
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: ${MS_REGISTER_DATABASE_URL}
+    username: ${MS_REGISTER_DATABASE_USER}
+    password: ${MS_REGISTER_DATABASE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: none

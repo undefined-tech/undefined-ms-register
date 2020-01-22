@@ -142,7 +142,19 @@
         <artifactId>liquibase-maven-plugin</artifactId>
         <version>3.5.2</version>
         <configuration>
-          <propertyFile>/src/main/resources/liquibase/liquibase.properties</propertyFile>
+          <!--suppress UnresolvedMavenProperty -->
+          <url>jdbc:postgresql://localhost:5432/ms-register</url>
+          <!--suppress UnresolvedMavenProperty -->
+          <username>postgres</username>
+          <!--suppress UnresolvedMavenProperty -->
+          <password>postgre</password>
+
+          <driver>org.postgresql.Driver</driver>
+          <referenceUrl>
+            hibernate:spring:br.com.undefined.msregister.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect
+          </referenceUrl>
+          <changeLogFile>src/main/resources/liquibase/change_log_master.xml</changeLogFile>
+          <diffChangeLogFile>src/main/resources/liquibase/diff_change_log/generated.xml</diffChangeLogFile>
         </configuration>
         <dependencies>
           <dependency>
