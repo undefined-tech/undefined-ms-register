@@ -1,21 +1,21 @@
 language: java
 script: mvn clean install
 branches:
-    only:
-        - realease
-        - develop
+  only:
+    - realease
+    - develop
 jdk:
-    - oraclejdk11
+  - oraclejdk11
 deploy:
-    provider: heroku
-    app: undefined-ms-register-develop
-    api_key: $HEROKU_TOKEN
-    skip_cleanup: true
-    on:
-        repo: undefined-tech/undefined-ms-register
-        branch: develop
+  provider: heroku
+  app: undefined-ms-register-develop
+  api_key: $HEROKU_TOKEN
+  skip_cleanup: true
+  on:
+    repo: undefined-tech/undefined-ms-register
+    branch: develop
 notifications:
-    email: false
+  email: false
 cache:
-    directories:
-        - $HOME/.m2
+  directories:
+    - $HOME/.m2

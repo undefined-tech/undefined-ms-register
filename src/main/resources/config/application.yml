@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ms-register
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: ${MS_REGISTER_DATABASE_URL}
+    username: ${MS_REGISTER_DATABASE_USER}
+    password: ${MS_REGISTER_DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: true
+    change-log: classpath:/liquibase/change_log_master.xml

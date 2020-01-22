@@ -1,0 +1,15 @@
+logging:
+  level:
+    ROOT: info
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+  jpa:
+    database: postgresql
+    show-sql: false
+server:
+  port: 8080
+  protocol: http
